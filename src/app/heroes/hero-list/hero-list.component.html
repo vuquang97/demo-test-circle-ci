@@ -1,0 +1,10 @@
+<p>hero-list works!</p>
+<ul class="list-group">
+    <li *ngFor="let el of listHero" class="list-group-item">
+        <a [routerLink]="['/hero-list/hero-detail', el.id]">
+            {{ el.id + ' ' + el.name }}
+        </a>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>

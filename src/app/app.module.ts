@@ -1,14 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CrisisListComponent } from './crisis-list/crisis-list.component';
+
+// import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeroesModule } from './heroes/heroes.module';
+import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { DropDownDirective } from './directives/drop-down.directive';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CrisisListComponent,
+    PageNotFoundComponent,
+    ComposeMessageComponent,
+    DropDownDirective,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    HeroesModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
